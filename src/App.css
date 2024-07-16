@@ -1,0 +1,228 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.position-relative {
+  position: relative;
+  display: flex;
+}
+
+.alert {
+  justify-content: left;
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0.45em 1em;
+  border: none;
+  outline: none;
+}
+
+
+/* Header section start=============================== */
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #ffffff26;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+}
+
+.heading {
+  justify-content: left;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.successMessage {
+  justify-content: left;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  border: none;
+  border-radius: 2px;
+}
+
+.button-01 {
+  align-self: center;
+  width: fit-content;
+  justify-content: center;
+  padding: 0.3em 0.7em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-weight: 600;
+}
+
+.button-01.dark {
+  color: rgb(255, 255, 255);
+  background: #111;
+}
+
+.button-01.light {
+  color: rgb(50, 50, 50);
+  background: #fff;
+}
+
+.button-01.dark::before {
+  content: "";
+  background: linear-gradient(45deg,
+      #ff00008e,
+      #ff730096,
+      #fffb00af,
+      #48ff009a,
+      #00ffd5af,
+      #002aff80,
+      #7b00ffa8,
+      #ff00c89d,
+      #ff000081);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-01 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.button-01.light::before {
+  content: "";
+  background: linear-gradient(45deg,
+      #a0e0e0,
+      #e0e0e0,
+      #d0d0d0,
+      #c0c0c0,
+      #b0b0b0b6,
+      #a0a0a06c,
+      #909090,
+      #808080,
+      #707070,
+      #e0e0e0);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-01 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-01 {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-01:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.button-01.dark:after {
+  background: #222;
+}
+
+.button-01.light:after {
+  background: #e6e6e6;
+}
+
+/* Header section end=============================== */
+
+
+/* text area start=============================== */
+.line-numbers {
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 0;
+  user-select: none;
+  white-space: pre-wrap;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  height: 100%;
+  overflow-y: hidden;
+  background-image: linear-gradient(220.55deg, #EAEAEA 0%, #8B8B8B 100%);
+}
+
+textarea {
+  flex: 1;
+  width: 100%;
+  line-height: 1.5;
+  border: none;
+  margin: 0;
+}
+
+/* text area end=============================== */
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
