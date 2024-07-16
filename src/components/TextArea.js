@@ -31,8 +31,8 @@ const TextArea = ({ text, handleOnChange, toggleMode, defaultRows }) => {
   };
 
   return (
-    <div className="mb-3 position-relative" style={{ fontFamily: 'monospace' }}>
-      <div id="lineNumberColumn" className="line-numbers position-absolute">
+    <div className="mb-3 position-relative" style={{ "fontFamily": "monospace" }}>
+      <div id="lineNumberColumn" className="line-numbers position-absolute px-2" style={{ borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px" }}>
         {getLineNumbers()}
       </div>
       <textarea
@@ -43,6 +43,7 @@ const TextArea = ({ text, handleOnChange, toggleMode, defaultRows }) => {
         className="form-control"
         rows={defaultRows}
         style={{
+          borderRadius: "10px",
           paddingLeft: `${40 + (String(text?.split("\n").length).length * 5)}px`,
           ...toggleMode()
         }}

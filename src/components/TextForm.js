@@ -209,6 +209,7 @@ export default function TextForm(props) {
         countWpm={countWpm}
         calculateWordsPerMinute={calculateWordsPerMinute}
         toggleMode={toggleMode}
+        colorMode={props.toggleMode}
       />
 
       <div className="container my-4" style={toggleMode()}>
