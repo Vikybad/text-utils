@@ -1,6 +1,7 @@
 import React from 'react';
+import "../App.css"
 
-const TextSummary = ({ wordCount, charCountWithoutSpace, charCountWithSpace, countWpm, calculateWordsPerMinute, toggleMode }) => {
+const TextSummary = ({ wordCount, charCountWithoutSpace, charCountWithSpace, countWpm, calculateWordsPerMinute, toggleMode, colorMode }) => {
 
   const summaryData = [
     { label: "Total words: ", value: wordCount() },
@@ -14,31 +15,15 @@ const TextSummary = ({ wordCount, charCountWithoutSpace, charCountWithSpace, cou
     <div className="container my-4" style={toggleMode()}>
       <h3>Your Text Summary</h3>
       <p>
-        <section>
-          {summaryData[0].label}
-          {/* style={{ pointerEvents: 'none' }} is used to disable pointer selection */}
-          <span className="btn " style={{ pointerEvents: 'none' }}> {summaryData[0].value} </span>
-        </section>
 
-        <section>
-          {summaryData[1].label}
-          <span className="btn mx-2 px-2" style={{ pointerEvents: 'none' }}> {summaryData[1].value} </span>
-        </section>
-
-        <section>
-          {summaryData[2].label}
-          <span className="btn mx-2 px-2" style={{ pointerEvents: 'none' }}> {summaryData[2].value} </span>
-        </section>
-        
-        <section>
-          {summaryData[3].label}
-          <span className="btn mx-2 px-2" style={{ pointerEvents: 'none' }}> {summaryData[3].value} </span>
-        </section>
-        
-        <section>
-          {summaryData[4].label}
-          <span className="btn mx-2 px-2" style={{ pointerEvents: 'none' }}> {summaryData[4].value} </span>
-        </section>
+        {summaryData.map((item, index) => (
+          <section key={index} className="my-3" style={{ letterSpacing: "1px" }}>
+            {item.label}
+            <span className={`mx-1 ${colorMode + "-summary-value"}`}>
+              {item.value.toString()}
+            </span>
+          </section>
+        ))}
 
       </p>
     </div>

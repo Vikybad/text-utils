@@ -19,10 +19,10 @@ const ClipboardButton = ({ text, setMsg, setType, colorMode }) => {
   }
 
   return (
-    <div className={`m-2 px-4`}>
+    <div className={`ml-2 px-2`}>
       <button
         onClick={copyContent}
-        className={`button-01 ${colorMode}`}
+        className={`p-2 button-01 ${colorMode}`}
       >
         Copy To Clipboard
       </button>

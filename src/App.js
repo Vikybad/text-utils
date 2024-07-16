@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState } from "react";
-import About from "./components/About";
 import Navbar from "./components/Navbar.js";
 import TextForm from "./components/TextForm.js";
 import { Routes, Route } from "react-router";
@@ -31,27 +30,12 @@ function App() {
           <Navbar
             mode={mode}
             title="Text Utilities"
-            homeText="Home"
-            aboutText="About"
             toggleMode={toggleMode}
             btnText={btnText}
           />
           <div className="container my-3">
             <TextForm heading="Converter" toggleMode={mode} />
           </div>
-        </div>
-      } />
-      <Route path="/about" element={
-        <div>
-          <Navbar
-            mode={mode}
-            title="Text Utilities"
-            homeText="Home"
-            aboutText="About"
-            toggleMode={toggleMode}
-            btnText={btnText}
-          />
-          <About />
         </div>
       } />
     </Routes>

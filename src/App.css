@@ -86,6 +86,21 @@
   background: #fff;
 }
 
+.dark-summary-value {
+  color: rgb(208, 211, 211);
+  font-weight: 800;
+  font-stretch: expanded;
+  /* letter-spacing: */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.light-summary-value {
+  color: rgb(121, 117, 117);
+  font-weight: 800;
+  font-stretch: expanded;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .button-01.dark::before {
   content: "";
   background: linear-gradient(45deg,
@@ -184,12 +199,14 @@
   margin: 0;
   user-select: none;
   white-space: pre-wrap;
-  background-color: #f8f9fa;
   padding: 10px;
   border-right: 1px solid #ccc;
   height: 100%;
   overflow-y: hidden;
-  background-image: linear-gradient(220.55deg, #EAEAEA 0%, #8B8B8B 100%);
+  background-image: linear-gradient(220.55deg,
+      #c7d1d1 0%,
+      #788183 50%,
+      #484f50 100%);
 }
 
 textarea {
